@@ -1,7 +1,12 @@
 import React from "react";
 import Search from "./Search";
 
-function Header({ search, searchedListings, setSearch }) {
+function Header({ search, searchedListings, setSearch, setSortPattern }) {
+  
+  // function handleSortClick(){
+  //   setSortPattern(searchedListings)
+  // }
+  // onClick={handleSortClick}
   return (
     <header>
       <h1>
@@ -15,6 +20,7 @@ function Header({ search, searchedListings, setSearch }) {
         searchedListings={searchedListings} 
         setSearch={setSearch}
       />
+      <button >Sort By Location</button>
     </header>
   );
 }

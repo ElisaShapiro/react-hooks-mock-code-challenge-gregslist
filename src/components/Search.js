@@ -1,9 +1,12 @@
 import React from "react";
 
-function Search({ search, searchedListings, setSearch }) {
+function Search({ search, searchedListings, setSearch, setSortPattern }) {
   function handleSubmit(e) {
     e.preventDefault();
     setSearch(e.target.value)
+  }
+  function handleSortClick(){
+    setSortPattern(searchedListings)
   }
 
   return (
@@ -16,6 +19,7 @@ function Search({ search, searchedListings, setSearch }) {
         onChange={handleSubmit}
       />
       <button type="submit">🔍</button>
+      <button onClick={handleSortClick}>Sort By Location</button>
     </form>
   );
 }
